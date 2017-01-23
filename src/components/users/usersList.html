@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="form-group">
+        <label>Search</label>
+        <input type="text" class="form-control" id="search" placeholder="Enter search string" ng-model="search">
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <th>ID</th><th>NAME</th><th>EMAIL</th><th>PHONE</th><th>ACTION</th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in users | filter:{name: search}">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>
+                <a href="#/users/1" class="btn btn-small btn-primary">Edit</a>
+                <button class="btn btn-small btn-danger" ng-click="deleteUser(user, $event)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

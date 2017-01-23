@@ -1,9 +1,16 @@
 module.exports = function(app) {
     app.config(function($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/asd', {template: '<h1>asdadasdasd</h1>'})
+            .when('/users', {
+                template: require('./components/users/usersList.html'),
+                controller: 'UsersListCtrl'
+            })
+            .when('/users/:userId', {
+                template: require('./components/users/addEditUser.html'),
+                controller: 'EditUserCtrl'
+            })
 
-            .otherwise({redirectTo: '/'});
+            .otherwise({redirectTo: '/users'});
 
         $locationProvider.hashPrefix('');
     });

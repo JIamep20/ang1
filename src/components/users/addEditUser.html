@@ -1,0 +1,36 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>{{user.name}} ({{user.username}})</legend>
+        <div class="form-group">
+            <label for="name" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="name" placeholder="Name" ng-model="user.name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="userName" class="col-lg-2 control-label">User name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="userName" placeholder="User Name" ng-model="user.username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="email" placeholder="Email" ng-model="user.email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phone" class="col-lg-2 control-label">Phone</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="phone" placeholder="Phone" ng-model="user.phone">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="website" class="col-lg-2 control-label">Website</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="website" placeholder="Website" ng-model="user.website">
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg" ng-click="saveUser()">Save</button>
+    </fieldset>
+</form>
